@@ -1,6 +1,6 @@
-# Elasticsearch Vagrant Box
+# Elasticsearch & Kibana Vagrant Box
 
-This vagrant box installs elasticsearch on Ubuntu 16.04 
+This vagrant box installs [Elasticsearch](https://www.elastic.co/products/elasticsearch) and [Kibana](https://www.elastic.co/products/kibana) on Ubuntu 16.04 
 
 ## Disclaimer
 
@@ -28,6 +28,7 @@ To log in to the machine run:
 vagrant ssh
 ```
 Elasticsearch will be available on the host machine at [http://localhost:9200/](http://localhost:9200/) 
+Kibana will be available on the host machine at [http://localhost:5601/](http://localhost:5601/) 
 
 ## Vagrant commands
 
@@ -38,10 +39,20 @@ vagrant halt # shut down the machine
 vagrant up --provision # re-applies provisioning
 ```
 
-##Elasticsearch commands
+## Elasticsearch commands
 
 Installed via debian package and automatically started on boot.
+
 Elasticsearch control:
 ```bash
 sudo service elasticsearch (start/stop/restart)
+```
+
+## Kibana commands
+
+Installed via debian package and automatically started on boot.
+
+Kibana control:
+```bash
+sudo service kibana (start/stop/restart)
 ```
