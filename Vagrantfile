@@ -16,5 +16,6 @@ Vagrant.configure("2") do |config|
      /bin/systemctl enable elasticsearch.service
      echo network.host: 0.0.0.0 >> /etc/elasticsearch/elasticsearch.yml
      echo ES_JAVA_OPTS= -Xms512m -Xmx512m >> /etc/default/elasticsearch
+     service elasticsearch start
    SHELL
 end
